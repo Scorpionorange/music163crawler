@@ -1,13 +1,13 @@
 /**
  * Created by ScorpionOrange on 2017/02/20.
  */
-import java.io.IOException;
-import java.net.URISyntaxException;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.scheduling.annotation.EnableAsync;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
 
 @SpringBootApplication
 @EnableAsync
