@@ -17,5 +17,4 @@ public class Application {
     public static void main(String[] args) throws IOException, URISyntaxException {
         SpringApplication.run(Application.class);
     }
-
 }
