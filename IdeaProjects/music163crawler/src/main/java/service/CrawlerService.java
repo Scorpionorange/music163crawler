@@ -9,6 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import com.google.common.collect.Lists;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Ehcache;
 
@@ -67,6 +68,12 @@ public class CrawlerService {
 
     private void init(String catalog) {
         // 根据catalog初始化爬虫队列
+        List<WebPage> webPages = Lists.newArrayList();
+        for(int i = 0; i < 43; i++) {
+            webPages.add(new WebPage("http://music.163.com/discover/playlist/?order=hot&cat="
+                    + catalog + "&limit=35&offset=" + (i * 35), WebPage.PageType.playlists));
+        }
+        webPageRepository.save(webPages);
     }
 
     @Async
@@ -169,5 +176,4 @@ public class CrawlerService {
         });
         crawl();
     }
-
 }

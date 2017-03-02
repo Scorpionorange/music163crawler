@@ -17,11 +17,6 @@ public class Application {
     public static void main(String[] args) throws IOException,
                                                   URISyntaxException,
                                                   IllegalAccessException {
-        try{
-            SpringApplication.run(Application.class);
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+        SpringApplication.run(Application.class);
     }
 }

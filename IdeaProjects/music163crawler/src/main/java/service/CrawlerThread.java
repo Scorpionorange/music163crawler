@@ -8,9 +8,11 @@ import model.WebPage;
 import model.WebPage.PageType;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CrawlerThread implements Runnable {
 
@@ -56,19 +58,25 @@ public class CrawlerThread implements Runnable {
 
     private List<WebPage> parsePlaylists(WebPage webPage) {
         // 解析歌单列表页面
-        return null;
+        Elements songs = Jsoup.parse(webPage.getHtml()).select("ul.f-hide li a");
+        return songs.stream().map(
+                e -> new WebPage(BASE_URL + e.attr("href"),
+                        PageType.song, e.html())).collect(Collectors.toList());
+
     }
 
     private List<WebPage> parsePlaylist(WebPage webPage) {
         //解析歌单页面
-        return null;
+        Elements songs = Jsoup.parse(webPage.getHtml()).select("ul.f-hide li a");
+        return songs.stream().map(
+                e -> new WebPage(BASE_URL + e.attr("href"),
+                        PageType.song, e.html())).collect(Collectors.toList());
+
     }
 
     private Song parseSong(WebPage webPage) throws Exception {
         // 解析歌曲页面
-        return null;
+        return new Song(webPage.getUrl(), webPage.getTitle(),
+                getCommentCount(webPage.getUrl().split("=")[1]));
     }
-
-
-
 }
