@@ -58,7 +58,7 @@ public class CrawlerThread implements Runnable {
 
     private List<WebPage> parsePlaylists(WebPage webPage) {
         // 解析歌单列表页面
-        Elements songs = Jsoup.parse(webPage.getHtml()).select("ul.f-hide li a");
+        Elements songs = Jsoup.parse(webPage.getHtml()).select(".tit.f-thide.s-fc0");
         return songs.stream().map(
                 e -> new WebPage(BASE_URL + e.attr("href"),
                         PageType.song, e.html())).collect(Collectors.toList());
