@@ -76,7 +76,8 @@ public class CrawlerThread implements Runnable {
 
     private Song parseSong(WebPage webPage) throws Exception {
         // 解析歌曲页面
-        return new Song(webPage.getUrl(), webPage.getTitle(),
-                getCommentCount(webPage.getUrl().split("=")[1]));
+        return new Song(webPage.getUrl(),
+                        webPage.getTitle(),
+                        Long.parseLong(webPage.getUrl().split("=")[1]));
     }
 }
