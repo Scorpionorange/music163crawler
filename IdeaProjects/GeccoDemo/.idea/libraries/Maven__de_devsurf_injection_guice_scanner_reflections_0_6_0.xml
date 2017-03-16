@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.devsurf.injection.guice.scanner:reflections:0.6.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/devsurf/injection/guice/scanner/reflections/0.6.0/reflections-0.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/devsurf/injection/guice/scanner/reflections/0.6.0/reflections-0.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/devsurf/injection/guice/scanner/reflections/0.6.0/reflections-0.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

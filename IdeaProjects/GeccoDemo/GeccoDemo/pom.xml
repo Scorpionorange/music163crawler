@@ -14,6 +14,61 @@
             <artifactId>gecco</artifactId>
             <version>1.2.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.9.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.1.35</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.devsurf.injection.guice.scanner</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>2.1_3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.apigee</groupId>
+            <artifactId>rhino</artifactId>
+            <version>1.7R5pre1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.huxhorn.lilith</groupId>
+            <artifactId>log4j</artifactId>
+            <version>0.9.40</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.weakref</groupId>
+            <artifactId>jmxutils</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.btmatthews.jaxb2_commons</groupId>
+            <artifactId>jaxb2-commons-lang3</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 

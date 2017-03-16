@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.apigee:rhino:1.7R5pre1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/apigee/rhino/1.7R5pre1/rhino-1.7R5pre1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/io/apigee/rhino/1.7R5pre1/rhino-1.7R5pre1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/io/apigee/rhino/1.7R5pre1/rhino-1.7R5pre1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
