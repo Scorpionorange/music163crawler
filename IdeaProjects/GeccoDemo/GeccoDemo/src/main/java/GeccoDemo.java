@@ -1,3 +1,7 @@
+import com.geccocrawler.gecco.GeccoEngine;
+import com.geccocrawler.gecco.annotation.*;
+import com.geccocrawler.gecco.spider.HtmlBean;
+
 /**
  * Created by ScorpionOrange on 2017/03/16.
  */

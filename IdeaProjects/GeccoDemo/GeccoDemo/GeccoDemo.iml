@@ -40,5 +40,6 @@
     <orderEntry type="library" name="Maven: io.apigee:rhino:1.7R5pre1" level="project" />
     <orderEntry type="library" name="Maven: de.huxhorn.lilith:log4j:0.9.40" level="project" />
     <orderEntry type="library" name="Maven: org.weakref:jmxutils:1.19" level="project" />
+    <orderEntry type="library" name="Maven: com.btmatthews.jaxb2_commons:jaxb2-commons-lang3:1.0.0" level="project" />
   </component>
 </module>
