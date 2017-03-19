@@ -70,7 +70,7 @@ public class AllSort implements HtmlBean {
         HttpGetRequest start = new HttpGetRequest("https://www.jd.com/allSort.aspx");
         start.setCharset("GBK");
         GeccoEngine.create()
-                .classpath("com.geccocrawler.gecco.demo.jd")
+                .classpath("com.greedisland.geccodemo")
                 //开始抓取的页面地址
                 .start(start)
                 //开启几个爬虫线程
