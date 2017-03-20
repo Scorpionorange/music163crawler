@@ -12,6 +12,7 @@ import com.geccocrawler.gecco.annotation.Request;
 import com.geccocrawler.gecco.request.HttpGetRequest;
 import com.geccocrawler.gecco.request.HttpRequest;
 import com.geccocrawler.gecco.spider.HtmlBean;
+import org.apache.log4j.BasicConfigurator;
 
 @Gecco(matchUrl="https://www.jd.com/allSort.aspx", pipelines={"consolePipeline", "allSortPipeline"})
 public class AllSort implements HtmlBean {
@@ -66,6 +67,9 @@ public class AllSort implements HtmlBean {
     }
 
     public static void main(String[] args) {
+        //
+        //String log4jConfPath = "log4j.properties";
+        BasicConfigurator.configure();
         //先获取分类列表
         HttpGetRequest start = new HttpGetRequest("https://www.jd.com/allSort.aspx");
         start.setCharset("GBK");
