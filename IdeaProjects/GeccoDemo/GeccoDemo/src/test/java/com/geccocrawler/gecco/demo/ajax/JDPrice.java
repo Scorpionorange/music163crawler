@@ -1,5 +1,7 @@
+package com.geccocrawler.gecco.demo.ajax;
+
 /**
- * Created by ScorpionOrange on 2017/03/19.
+ * Created by ScorpionOrange on 2017/03/20.
  */
 import com.geccocrawler.gecco.annotation.JSONPath;
 import com.geccocrawler.gecco.spider.JsonBean;
@@ -40,4 +42,5 @@ public class JDPrice implements JsonBean {
     public void setCode(String code) {
         this.code = code;
     }
+
 }

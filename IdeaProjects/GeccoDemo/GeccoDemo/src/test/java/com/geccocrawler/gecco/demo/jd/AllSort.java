@@ -1,4 +1,4 @@
-
+package com.geccocrawler.gecco.demo.jd;
 /**
  * Created by ScorpionOrange on 2017/03/18.
  */
@@ -74,7 +74,7 @@ public class AllSort implements HtmlBean {
         HttpGetRequest start = new HttpGetRequest("https://www.jd.com/allSort.aspx");
         start.setCharset("GBK");
         GeccoEngine.create()
-                .classpath("com.greedisland.geccodemo")
+                .classpath("com.geccocrawler.gecco.demo.jd")
                 //开始抓取的页面地址
                 .start(start)
                 //开启几个爬虫线程

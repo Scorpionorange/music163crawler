@@ -1,47 +1,38 @@
+package com.geccocrawler.gecco.demo.ajax;
+
 /**
- * Created by ScorpionOrange on 2017/03/19.
+ * Created by ScorpionOrange on 2017/03/20.
  */
+
+import com.geccocrawler.gecco.GeccoEngine;
 import com.geccocrawler.gecco.annotation.Ajax;
 import com.geccocrawler.gecco.annotation.Gecco;
 import com.geccocrawler.gecco.annotation.HtmlField;
 import com.geccocrawler.gecco.annotation.Image;
 import com.geccocrawler.gecco.annotation.RequestParameter;
 import com.geccocrawler.gecco.annotation.Text;
+import com.geccocrawler.gecco.request.HttpGetRequest;
+import com.geccocrawler.gecco.request.HttpRequest;
 import com.geccocrawler.gecco.spider.HtmlBean;
 
 @Gecco(matchUrl="https://item.jd.com/{code}.html", pipelines="consolePipeline")
-public class ProductDetail implements HtmlBean {
+public class JDDetail implements HtmlBean {
 
     private static final long serialVersionUID = -377053120283382723L;
 
-    /**
-     * 商品代码
-     */
     @RequestParameter
     private String code;
 
-    /**
-     * 标题
-     */
+    @Ajax(url="https://p.3.cn/prices/get?type=1&pdtk=&pdbp=0&skuid=J_{code}")
+    private JDPrice price;
+
     @Text
     @HtmlField(cssPath="#name > h1")
     private String title;
 
-    /**
-     * ajax获取商品价格
-     */
-    @Ajax(url="http://p.3.cn/prices/get?type=1&pdtk=&pdbp=0&skuid=J_{code}")
-    private JDPrice price;
-
-    /**
-     * 商品的推广语
-     */
-    @Ajax(url="http://cd.jd.com/promotion/v2?skuId={code}&area=1_2805_2855_0&cat=737%2C794%2C798")
+    @Ajax(url="https://cd.jd.com/promotion/v2?skuId={code}&area=1_2805_2855_0&cat=737%2C794%2C798")
     private JDad jdAd;
 
-    /*
-     * 商品规格参数
-     */
     @HtmlField(cssPath="#product-detail-2")
     private String detail;
 
@@ -95,5 +86,19 @@ public class ProductDetail implements HtmlBean {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public static void main(String[] args) throws Exception {
+        HttpRequest request = new HttpGetRequest("https://item.jd.com/1455427.html");
+        request.setCharset("GBK");
+        GeccoEngine.create()
+                .classpath("com.geccocrawler.gecco.demo.ajax")
+                //开始抓取的页面地址
+                .start(request)
+                //开启几个爬虫线程
+                .thread(1)
+                //单个爬虫每次抓取完一个请求后的间隔时间
+                .interval(2000)
+                .start();
     }
 }

@@ -1,4 +1,4 @@
-/**
+package com.geccocrawler.gecco.demo.jd; /**
  * Created by ScorpionOrange on 2017/03/19.
  */
 import com.geccocrawler.gecco.annotation.Attr;

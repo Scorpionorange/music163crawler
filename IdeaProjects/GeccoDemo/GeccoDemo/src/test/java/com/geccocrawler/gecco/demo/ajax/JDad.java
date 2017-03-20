@@ -1,5 +1,7 @@
+package com.geccocrawler.gecco.demo.ajax;
+
 /**
- * Created by ScorpionOrange on 2017/03/19.
+ * Created by ScorpionOrange on 2017/03/20.
  */
 import java.util.List;
 
@@ -32,4 +34,5 @@ public class JDad implements JsonBean {
     public void setAds(List<JSONObject> ads) {
         this.ads = ads;
     }
+
 }
